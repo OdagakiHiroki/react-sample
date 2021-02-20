@@ -1,14 +1,10 @@
-export const actionTypes = {
-  RESET: 'home/reset',
-  SET_TEXT: 'home/set_text',
-};
+import { createActions } from 'redux-actions';
 
-export const actions = {
-  reset: () => ({
-    type: actionTypes.RESET
-  }),
-  setText: (text) => ({
-    type: actionTypes.SET_TEXT,
-    payload: { text },
-  }),
-}
+const actions = createActions(
+  {
+    SET_TEXT: (text) => ({ text })
+  },
+  'RESET',
+)
+
+export default actions;

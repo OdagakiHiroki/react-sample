@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Homes from 'js/components/pages/Home';
-import { actions } from 'js/store/modules/home/action';
+import actions from 'js/store/modules/home/action';
 
 function mapStateToProps(state) {
   return {

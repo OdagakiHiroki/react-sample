@@ -1,13 +1,13 @@
 import { handleActions } from 'redux-actions';
-import { actionTypes } from './action';
+import actions from './action';
 
 const defaultState = {
   text: null,
 }
 
 export default handleActions({
-  [actionTypes.RESET]: () => defaultState,
-  [actionTypes.SET_TEXT]: (prevState, action) => {
+  [actions.reset]: () => defaultState,
+  [actions.setText]: (prevState, action) => {
     return {
       ...prevState,
       text: action.payload.text,
